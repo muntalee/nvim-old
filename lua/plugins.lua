@@ -32,6 +32,8 @@ return require('packer').startup(function(use)
     use("rebelot/kanagawa.nvim")
     use("navarasu/onedark.nvim")
     use("bluz71/vim-nightfly-colors")
+    use("craftzdog/solarized-osaka.nvim")
+    use("NLKNguyen/papercolor-theme")
 
     -- lua functions that many plugins use
     use("nvim-lua/plenary.nvim")
@@ -94,11 +96,6 @@ return require('packer').startup(function(use)
     -- toggles number
     use("sitiom/nvim-numbertoggle")
 
-    -- bufferline
-    -- use("akinsho/bufferline.nvim")
-    -- lualine
-    -- use("nvim-lualine/lualine.nvim")
-
     -- for diagnostics
     use("folke/trouble.nvim")
 
@@ -121,6 +118,9 @@ return require('packer').startup(function(use)
             -- }
         end
     })
+
+    -- float term
+    use("voldikss/vim-floaterm")
 
     if packer_bootstrap then
         require('packer').sync()

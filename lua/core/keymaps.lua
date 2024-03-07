@@ -27,6 +27,12 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { noremap = true
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>",     { noremap = true, silent = true }) -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>",   { noremap = true, silent = true }) -- list available help tags
 
+-- terminal
+keymap.set("n", "<leader>tt", "<cmd>FloatermToggle<cr>",        { noremap = true, silent = true })
+
+-- open todos
+keymap.set("n", "<leader>td", "<cmd>edit ~/notes/todo.md<cr>",  { noremap = true, silent = true })
+
 -- enable/disable line numbers
 keymap.set("n", "<C-n>", ":set nu! rnu!<cr>")
 
@@ -35,11 +41,15 @@ keymap.set("n", "<leader>fo", ":!open .<cr>")
 
 -- Compiling C++ code
 vim.api.nvim_exec([[
-  autocmd FileType cpp nnoremap <C-b> :w<CR>:!g++ -Wall -std=c++17 -O2 % -o %<.out && ./%<.out<CR>
+    autocmd FileType cpp nnoremap <C-b> :w<CR>:FloatermNew --autoclose=0 g++ -Wall -std=c++17 -02 % -o %< && ./%<<CR>
+]], false)
+
+-- Compiling C code
+vim.api.nvim_exec([[
+    autocmd FileType c nnoremap <C-b> :w<CR>:FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>
 ]], false)
 
 -- Running Python files
 vim.api.nvim_exec([[
-  autocmd FileType python nnoremap <C-b> :w<CR>:!python3 %<CR>
+    autocmd FileType python nnoremap <C-b> :w<CR>:FloatermNew --autoclose=0 python3 %<CR>
 ]], false)
-

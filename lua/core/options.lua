@@ -1,3 +1,5 @@
+vim.cmd[[filetype plugin on]]
+
 local opt = vim.opt
 local g = vim.g
 
