@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
     use("bluz71/vim-nightfly-colors")
     use("craftzdog/solarized-osaka.nvim")
     use("NLKNguyen/papercolor-theme")
+    use("catppuccin/nvim")
 
     -- lua functions that many plugins use
     use("nvim-lua/plenary.nvim")
@@ -121,6 +122,9 @@ return require('packer').startup(function(use)
 
     -- float term
     use("voldikss/vim-floaterm")
+
+    -- idk it looks nice
+    use("nvim-lualine/lualine.nvim")
 
     if packer_bootstrap then
         require('packer').sync()

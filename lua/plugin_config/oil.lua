@@ -1,2 +1,3 @@
 require("oil").setup()
-vim.keymap.set("n", "-", "<Cmd>Oil --float<CR>", { buffer = 0})
+vim.keymap.set("n", "-", ":Oil --float<CR>", { noremap = true, silent = true })
+

@@ -10,7 +10,7 @@ lsp.ensure_installed({
     'cssls',
     'marksman',
     'pyright',
-    'hls'
+    'jdtls'
 })
 
 -- Fix Undefined global 'vim'

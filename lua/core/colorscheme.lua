@@ -25,15 +25,26 @@ require('solarized-osaka').setup {
     transparent = true
 }
 
-function ColorMe(color)
-    color = color or "rose-pine-moon"
-    vim.cmd.colorscheme(color)
+require("catppuccin").setup({
+    flavour = "mocha",
+    transparent_background = true,
+})
 
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+require("rose-pine").setup({
+    styles = {
+        transparency = true,
+    },
+})
+
+function ColorMe(color, is_transparent)
+    vim.cmd.colorscheme(color)
+    if is_transparent then
+        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    end
 end
 
-ColorMe('onedark')
+ColorMe("rose-pine-moon", false)
 
 vim.cmd[[highlight ExtraWhitespace ctermbg=red guibg=red]]
 vim.cmd[[match ExtraWhitespace /\s\+$/]]

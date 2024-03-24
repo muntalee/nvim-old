@@ -31,13 +31,16 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>",   { noremap = true
 keymap.set("n", "<leader>tt", "<cmd>FloatermToggle<cr>",        { noremap = true, silent = true })
 
 -- open todos
-keymap.set("n", "<leader>td", "<cmd>edit ~/notes/todo.md<cr>",  { noremap = true, silent = true })
+keymap.set("n", "<leader>td", "<cmd>edit /Users/munta/Library/Mobile\\ Documents/iCloud~md~obsidian/Documents/iphone-notes<cr>",  { noremap = true, silent = true })
 
 -- enable/disable line numbers
 keymap.set("n", "<C-n>", ":set nu! rnu!<cr>")
 
 -- opens file explorer
 keymap.set("n", "<leader>fo", ":!open .<cr>")
+
+-- zenmode
+keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>",   { noremap = true, silent = true })
 
 -- Compiling C++ code
 vim.api.nvim_exec([[
