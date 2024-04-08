@@ -20,8 +20,8 @@ opt.hlsearch = false
 
 -- appearance
 opt.termguicolors = true
+-- opt.number = true
 opt.signcolumn = "number"
-opt.number = true
 
 -- clipboard & backspace
 opt.backspace = "indent,eol,start"
@@ -35,6 +35,9 @@ opt.iskeyword:append("-")
 -- undo dir
 opt.undodir = "/tmp/"
 opt.undofile = true
+
+-- hide ~ in blank lines
+vim.wo.fillchars='eob: '
 
 -- slimv
 g.slimv_repl_split = 4
