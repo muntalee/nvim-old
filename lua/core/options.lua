@@ -20,7 +20,7 @@ opt.hlsearch = false
 
 -- appearance
 opt.termguicolors = true
--- opt.number = true
+opt.number = true
 opt.signcolumn = "number"
 
 -- clipboard & backspace

@@ -3,6 +3,11 @@ require('kanagawa').setup { transparent = true }
 require('gruvbox').setup { transparent_mode = true }
 require('everforest').setup { transparent_background = true }
 
+local transparent = true
+if vim.g.neovide then
+    transparent = false
+end
+
 require('solarized-osaka').setup {
     on_highlights = function(hl, c)
         hl.TelescopeNormal = {
@@ -22,17 +27,17 @@ require('solarized-osaka').setup {
             fg = c.bg_dark,
         }
     end,
-    transparent = true
+    transparent = transparent
 }
 
 require("catppuccin").setup({
     flavour = "mocha",
-    transparent_background = true,
+    transparent_background = transparent,
 })
 
 require("rose-pine").setup({
     styles = {
-        transparency = true,
+        transparency = transparent,
     },
 })
 
@@ -44,7 +49,7 @@ function ColorMe(color, is_transparent)
     end
 end
 
-ColorMe("rose-pine-moon", false)
+ColorMe("onedark", transparent)
 
 vim.cmd[[highlight ExtraWhitespace ctermbg=red guibg=red]]
 vim.cmd[[match ExtraWhitespace /\s\+$/]]
