@@ -81,11 +81,11 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-path' },
             { 'saadparwaiz1/cmp_luasnip' },
             { 'hrsh7th/cmp-nvim-lsp' },
-            { 'hrsh7th/cmp-nvim-lua' },
 
             -- Snippets
             { 'L3MON4D3/LuaSnip' },
             { 'rafamadriz/friendly-snippets' },
+            { 'mlaursen/vim-react-snippets' }
         }
     }
 
@@ -111,13 +111,13 @@ return require('packer').startup(function(use)
     use({
         "lukas-reineke/indent-blankline.nvim",
         config = function ()
-            -- require("ibl").setup {
-            --     indent = { char = "|" },
-            --     whitespace = {
-            --         remove_blankline_trail = false,
-            --     },
-            --     scope = { enabled = false },
-            -- }
+            require("ibl").setup {
+                indent = { char = "|" },
+                whitespace = {
+                    remove_blankline_trail = false,
+                },
+                scope = { enabled = false },
+            }
         end
     })
 

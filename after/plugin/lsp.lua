@@ -12,6 +12,7 @@ lsp.ensure_installed({
     'pyright',
     'jdtls',
     'eslint',
+    'emmet_ls'
 })
 
 -- Fix Undefined global 'vim'
@@ -63,3 +64,4 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
