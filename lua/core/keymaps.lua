@@ -44,7 +44,7 @@ keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>",   { noremap = true, silent = tr
 
 -- Compiling C++ code
 vim.api.nvim_exec([[
-    autocmd FileType cpp nnoremap <C-b> :w<CR>:FloatermNew --autoclose=0 g++ -Wall -std=c++17 -02 % -o %< && ./%<<CR>
+    autocmd FileType cpp nnoremap <C-b> :w<CR>:FloatermNew --autoclose=0 g++ -Wall -std=c++20 % -o %< && ./%<<CR>
 ]], false)
 
 -- Compiling C code

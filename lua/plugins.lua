@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
     use("craftzdog/solarized-osaka.nvim")
     use("NLKNguyen/papercolor-theme")
     use("catppuccin/nvim")
+    use("Tsuzat/NeoSolarized.nvim")
 
     -- lua functions that many plugins use
     use("nvim-lua/plenary.nvim")
