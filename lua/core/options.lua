@@ -1,4 +1,4 @@
-vim.cmd[[filetype plugin on]]
+vim.cmd([[filetype plugin on]])
 
 local opt = vim.opt
 local g = vim.g
@@ -11,7 +11,7 @@ opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
-vim.cmd[[set colorcolumn=80]]
+vim.cmd([[set colorcolumn=80]])
 
 opt.wrap = false
 opt.ignorecase = true
@@ -37,8 +37,8 @@ opt.undodir = "/tmp/"
 opt.undofile = true
 
 -- hide ~ in blank lines
-vim.wo.fillchars='eob: '
+vim.wo.fillchars = "eob: "
 
 -- slimv
 g.slimv_repl_split = 4
-vim.cmd[[au FileType REPL set nonu]]
+vim.cmd([[au FileType REPL set nonu]])

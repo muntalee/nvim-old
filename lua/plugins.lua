@@ -1,6 +1,7 @@
 -- auto install packer if not installed
 local ensure_packer = function()
-    local fn = vim.fn local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+    local fn = vim.fn
+    local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
     if fn.empty(fn.glob(install_path)) > 0 then
         fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
         vim.cmd([[packadd packer.nvim]])
@@ -108,18 +109,21 @@ return require('packer').startup(function(use)
     })
 
     -- indent guides
-    use({
-        "lukas-reineke/indent-blankline.nvim",
-        config = function ()
-            require("ibl").setup {
-                indent = { char = "|" },
-                whitespace = {
-                    remove_blankline_trail = false,
-                },
-                scope = { enabled = false },
-            }
-        end
-    })
+    -- use({
+    --     "lukas-reineke/indent-blankline.nvim",
+    --     config = function ()
+    --         require("ibl").setup {
+    --             indent = { char = "|" },
+    --             whitespace = {
+    --                 remove_blankline_trail = false,
+    --             },
+    --             scope = { enabled = false },
+    --         }
+    --     end
+    -- })
+
+    -- formatter
+    use("stevearc/conform.nvim")
 
     -- float term
     use("voldikss/vim-floaterm")
