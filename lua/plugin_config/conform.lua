@@ -9,6 +9,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		python = { "isort", "black" },
 		javascript = { { "prettierd", "prettier", "eslint_d" } },
+		javascriptreact = { { "prettierd", "prettier", "eslint_d" } },
 		c = { "astyle_allman" },
 		cpp = { "astyle_allman" },
 	},

@@ -10,6 +10,7 @@ require("everforest").setup({ transparent_background = transparent })
 require("solarized-osaka").setup({ transparent = transparent })
 require("rose-pine").setup({ styles = { transparency = transparent } })
 require("catppuccin").setup({ transparent_background = transparent })
+require("vitesse").setup({ transparent_background = transparent })
 
 function ColorMe(color, is_transparent)
 	vim.cmd.colorscheme(color)
@@ -22,7 +23,7 @@ function ColorMe(color, is_transparent)
 	-- end
 end
 
-ColorMe("solarized-osaka", transparent)
+ColorMe("vitesse", transparent)
 
 vim.cmd([[highlight ExtraWhitespace ctermbg=red guibg=red]])
 vim.cmd([[match ExtraWhitespace /\s\+$/]])
