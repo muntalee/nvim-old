@@ -8,7 +8,7 @@ require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
 		python = { "isort", "black" },
-		javascript = { { "prettierd", "prettier" } },
+		javascript = { { "prettierd", "prettier", "eslint_d" } },
 		c = { "astyle_allman" },
 		cpp = { "astyle_allman" },
 	},
