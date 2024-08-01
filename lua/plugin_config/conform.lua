@@ -12,8 +12,7 @@ require("conform").setup({
 		javascriptreact = { { "prettierd", "prettier", "eslint_d" } },
 		c = { "astyle_allman" },
 		cpp = { "astyle_allman" },
-		json = { "yq" },
-		yaml = { "yq" },
+		json = { "fixjson" },
 	},
 	formatters = {
 		astyle_allman = {
